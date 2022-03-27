@@ -17,44 +17,48 @@
 <!--                <property name="message1" value="HelloWorld!"/>-->
 <!--                <property name="message3" value="Hello Iran!"/>-->
 <!--        </bean>-->
-<bean name="javaCollection" class="InjectingCollections.JavaCollection">
-    <property name="addressList">
-        <list>
-            <value>INDIA</value>
-            <value>Iran</value>
-            <value>CANADA</value>
-            <value>Iran</value>
-        </list>
-    </property>
+<!--<bean name="javaCollection" class="InjectingCollections.JavaCollection">-->
+<!--    <property name="addressList">-->
+<!--        <list>-->
+<!--            <value>INDIA</value>-->
+<!--            <value>Iran</value>-->
+<!--            <value>CANADA</value>-->
+<!--            <value>Iran</value>-->
+<!--        </list>-->
+<!--    </property>-->
 
-    <property name="addressSet">
-        <set>
-            <value>INDIA</value>
-            <value>Iran</value>
-            <value>CANADA</value>
-            <value>Iran</value>
-        </set>
-    </property>
+<!--    <property name="addressSet">-->
+<!--        <set>-->
+<!--            <value>INDIA</value>-->
+<!--            <value>Iran</value>-->
+<!--            <value>CANADA</value>-->
+<!--            <value>Iran</value>-->
+<!--        </set>-->
+<!--    </property>-->
 
-    <property name="addressMap">
-        <map>
-            <entry key="1" value="INDIA"/>
-            <entry key="2" value="Iran"/>
-            <entry key="3" value="USA"/>
-            <entry key="4" value="USA"/>
-        </map>
-    </property>
+<!--    <property name="addressMap">-->
+<!--        <map>-->
+<!--            <entry key="1" value="INDIA"/>-->
+<!--            <entry key="2" value="Iran"/>-->
+<!--            <entry key="3" value="USA"/>-->
+<!--            <entry key="4" value="USA"/>-->
+<!--        </map>-->
+<!--    </property>-->
 
-    <property name="addressProp">
-        <props>
-            <prop key = "one">INDIA</prop>
-            <prop key = "one">INDIA</prop>
-            <prop key = "two">Pakistan</prop>
-            <prop key = "three">USA</prop>
-            <prop key = "four">USA</prop>
-        </props>
-    </property>
-</bean>
+<!--    <property name="addressProp">-->
+<!--        <props>-->
+<!--            <prop key = "one">INDIA</prop>-->
+<!--            <prop key = "one">INDIA</prop>-->
+<!--            <prop key = "two">Pakistan</prop>-->
+<!--            <prop key = "three">USA</prop>-->
+<!--            <prop key = "four">USA</prop>-->
+<!--        </props>-->
+<!--    </property>-->
+<!--</bean>-->
+    <context:annotation-config/>
+
+    <bean id="textEditor" class="CompleteAutoWireDef.OnSetter.TextEditor"/>
+    <bean id="spellChecker" class="CompleteAutoWireDef.OnSetter.SpellChecker"/>
     <!-- bean definitions here -->
 
 </beans>
