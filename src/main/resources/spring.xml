@@ -8,8 +8,15 @@
 <!--    <bean id="tyre" class="BeanPropertyXML.Tyre">-->
 <!--        <property name="brand" value="MRD"/>-->
 <!--    </bean>-->
-        <bean id="test" class="BeanLifeCycle.TestClass" init-method="init" destroy-method="destroy"/>
-
+<!--        <bean id="test" class="BeanLifeCycle.TestClass" init-method="init" destroy-method="destroy"/>-->
+        <bean id="helloWorld" class="BeanInheritance.HelloWorld">
+                <property name="message1" value="HelloWorld!"/>
+                <property name="message2" value="Hello Again!"/>
+        </bean>
+        <bean id="helloIran" class="BeanInheritance.HelloIran" parent="helloWorld">
+                <property name="message1" value="HelloWorld!"/>
+                <property name="message3" value="Hello Iran!"/>
+        </bean>
     <!-- bean definitions here -->
 
 </beans>

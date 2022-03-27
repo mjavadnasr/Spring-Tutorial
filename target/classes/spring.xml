@@ -3,12 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-        <context:component-scan base-package="AutowiredDef"/>
+<!--        <context:component-scan base-package="AutowiredDef"/>-->
     <!--    <bean id="vehicle" class="SpringUsingXML.Bike"/>-->
 <!--    <bean id="tyre" class="BeanPropertyXML.Tyre">-->
 <!--        <property name="brand" value="MRD"/>-->
 <!--    </bean>-->
-
+<!--        <bean id="test" class="BeanLifeCycle.TestClass" init-method="init" destroy-method="destroy"/>-->
+        <bean id="helloWorld" class="BeanInheritance.HelloWorld">
+                <property name="message1" value="HelloWorld!"/>
+                <property name="message2" value="Hello Again!"/>
+        </bean>
+        <bean id="helloIran" class="BeanInheritance.HelloIran" parent="helloWorld">
+                <property name="message1" value="HelloWorld!"/>
+                <property name="message3" value="Hello Iran!"/>
+        </bean>
     <!-- bean definitions here -->
 
 </beans>
